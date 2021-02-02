@@ -1,12 +1,21 @@
-﻿#include <iostream>
+﻿#include "header.h"
+#include <iostream>
+using namespace std;
 
-int main()
-{
-    std::cout << "Hello World!\n";
+int main() {
+    next_player = 1;
+    while (true) {
+        ShowTable();
+        ChooseMove();
+        if (JudgeGame()) { break; }
+        next_player *= -1;
+    }
+    return 0;
 }
 
+
 // プログラムの実行: Ctrl + F5 または [デバッグ] > [デバッグなしで開始] メニュー
-// プログラムのデバッグ: F5 または [デバッグ] > [デバッグの開始] メニュー
+// プログラムのデバッグ: F5 または [デバッグ] > [デバッグの開始] メニューs
 
 // 作業を開始するためのヒント: 
 //    1. ソリューション エクスプローラー ウィンドウを使用してファイルを追加/管理します 
